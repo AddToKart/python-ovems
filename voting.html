@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="/voting.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🗳️ Python Online Voting System</h1>
+
+      <!-- System Setup Section -->
+      <div class="section">
+        <h2>System Setup</h2>
+        <button id="setupDatabase" class="btn">Setup Database Tables</button>
+      </div>
+
+      <!-- Candidate Management -->
+      <div class="section">
+        <h2>Add Candidate</h2>
+        <div class="form-group">
+          <input
+            type="text"
+            id="candidateName"
+            placeholder="Candidate Name"
+            required
+          />
+          <input
+            type="text"
+            id="candidateParty"
+            placeholder="Political Party"
+          />
+          <select id="candidatePosition">
+            <option value="">Select Position</option>
+            <option value="President">President</option>
+            <option value="Vice President">Vice President</option>
+            <option value="Senator">Senator</option>
+            <option value="Governor">Governor</option>
+          </select>
+          <textarea
+            id="candidateDescription"
+            placeholder="Candidate Description"
+          ></textarea>
+          <button id="addCandidate" class="btn">Add Candidate</button>
+        </div>
+      </div>
+
+      <!-- Voter Registration -->
+      <div class="section">
+        <h2>Register Voter</h2>
+        <div class="form-group">
+          <input type="text" id="voterId" placeholder="Voter ID" required />
+          <input type="text" id="voterName" placeholder="Full Name" required />
+          <input
+            type="email"
+            id="voterEmail"
+            placeholder="Email Address"
+            required
+          />
+          <button id="registerVoter" class="btn">Register Voter</button>
+        </div>
+      </div>
+
+      <!-- Voting Section -->
+      <div class="section">
+        <h2>Cast Your Vote</h2>
+        <div class="form-group">
+          <input
+            type="text"
+            id="voteVoterId"
+            placeholder="Enter your Voter ID"
+            required
+          />
+          <select id="voteCandidate">
+            <option value="">Select Candidate</option>
+          </select>
+          <button id="castVote" class="btn btn-primary">Cast Vote</button>
+        </div>
+      </div>
+
+      <!-- Results Display -->
+      <div class="section">
+        <h2>Election Results</h2>
+        <button id="getResults" class="btn">View Results</button>
+        <div id="resultsDisplay"></div>
+      </div>
+
+      <!-- Candidates List -->
+      <div class="section">
+        <h2>All Candidates</h2>
+        <button id="getCandidates" class="btn">View Candidates</button>
+        <div id="candidatesList"></div>
+      </div>
+
+      <!-- Audit Logs -->
+      <div class="section">
+        <h2>System Audit Logs</h2>
+        <button id="getAuditLogs" class="btn">View Audit Logs</button>
+        <div id="auditLogsList"></div>
+      </div>
+
+      <!-- Response Log -->
+      <div class="section">
+        <h2>System Messages</h2>
+        <div id="responseLog"></div>
+      </div>
+    </div>
+
+    <script src="/voting.js"></script>
+  </body>
+</html>
